@@ -2,6 +2,8 @@ var fontSize = 4;
 
 function setup() {
     change('fontSize', 0);
+	restoreText();
+	updateShares();
 }
 
 function change(command){
@@ -33,3 +35,25 @@ function openNav() {
     document.getElementById("openNav").style.display = 'inline-block';
     document.getElementById("closeNav").style.display = 'none';
   }
+
+  
+function saveText(){
+	if(typeof localStorage != "undefined"){
+		localStorage.setItem("title", document.getElementById('note-title').value);
+		
+		localStorage.setItem("note", document.getElementById('note').innerHTML);
+	}
+	updateShares();
+}
+  
+function restoreText(){
+	if(typeof localStorage != "undefined"){
+		document.getElementById("note-title").value = localStorage.getItem("title");
+		
+		document.getElementById("note").innerHTML = localStorage.getItem("note");
+	}
+}
+
+function updateShares(){
+	document.getElementById('twitterShare').innerHTML = "<button onclick='window.location.href = `https://twitter.com/intent/tweet?text= " + document.getElementById("note").innerHTML + "`;'>Share on Twitter</button>";
+}

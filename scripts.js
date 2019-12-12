@@ -39,10 +39,9 @@ function openNav() {
   
 function saveText(){
 	if(typeof localStorage != "undefined"){
-		localStorage.setItem("title", document.getElementById('note-title').value);
-		
-		localStorage.setItem("note", document.getElementById('note').innerHTML);
-	}
+        localStorage.setItem(document.getElementById('note-title').value, document.getElementById('note').innerHTML);	
+		//localStorage.setItem("note", document.getElementById('note').innerHTML);
+    }
 	updateShares();
 }
   
@@ -56,4 +55,25 @@ function restoreText(){
 
 function updateShares(){
 	document.getElementById('twitterShare').innerHTML = "<button onclick='window.location.href = `https://twitter.com/intent/tweet?text= " + document.getElementById("note").innerHTML + "`;'>Share on Twitter</button>";
+}
+
+function deleteNote(){
+    if(typeof localStorage != "undefined"){
+		localStorage.removeItem(document.getElementById('note-title').value, document.getElementById('note').innerHTML);
+        document.getElementById('note-title') = "";
+        document.getElementById('note') = "";
+		//localStorage.setItem("note", document.getElementById('note').innerHTML);
+	}
+}
+
+function displayNote(){
+    var x = localStorage.getItem(document.getElementById('note-title'));
+
+    document.getElementById("note-title").innerHTML = x;
+}
+
+function newNote(){
+    document.getElementById('note-title').value = "";
+    document.getElementById('note').innerHTML = "";
+
 }

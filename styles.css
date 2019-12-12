@@ -126,7 +126,7 @@ body{
     display: table-cell;
 }
 
-#main button{
+#main button, a{
     border: none;
     overflow: hidden;
     text-align: center;
@@ -140,11 +140,11 @@ body{
     color: white;
 }
 
-#main button:hover{
+#main button:hover, a:hover{
     background-color: lightgray;
     color: black;
 }
-
+	
 #closeNav{
     display: none;
 

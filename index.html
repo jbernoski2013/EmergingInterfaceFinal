@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Notes 101</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body onload="setup()">
+    <div id="navBar">
+        <div class="navBar-table">
+                <div><button id="newNote"  onclick="alert('not implemented')">New Note</button></div>
+                <div><button>Note 1</button></div>
+                <div><button>Note 2</button></div>
+                <div><button>Note 3</button></div>
+        </div>
+    </div>
+
+
+    <div id="main">
+        <button id="openNav" class="item-nav header" onclick="openNav()">&#9776;</button>
+        <button id="closeNav" class="item-nav header" onclick="closeNav()">X</button>
+
+        <div class="item-header header header-title">
+            <h1>Notes 101</h1>
+        </div>
+
+        <div id="edit-option" class="item-options">
+            <img class="edit-option-icon" src="images/undo.png" onclick="change('undo')">
+            <img class="edit-option-icon" src="images/redo.png" onclick="change('redo')">
+            <img class="edit-option-icon" src="images/plus.png" onclick="change('fontSize', 1)">
+            <img class="edit-option-icon" src="images/minus.png" onclick="change('fontSize', -1)">
+            <img class="edit-option-icon" src="images/bold.png" onclick="change('bold')">
+            <img class="edit-option-icon" src="images/italic.png" onclick="change('italic')">
+            <img class="edit-option-icon" src="images/underline.png" onclick="change('underline')">
+            <img class="edit-option-icon" src="images/Left.png" onclick="change('justifyLeft')">
+            <img class="edit-option-icon" src="images/center.png" onclick="change('justifyCenter')">
+            <img class="edit-option-icon" src="images/right.png" onclick="change('justifyRight')">
+            <img class="edit-option-icon" src="images/numbered.png" onclick="change('insertOrderedList')">
+            <img class="edit-option-icon" src="images/list.png" onclick="change('insertUnorderedList')">
+        </div>
+
+        <div class="item-title">
+            <input type="text" id="note-title" value="test" />
+        </div>
+
+        <div class="item-note">
+            <div id="note" contenteditable="true">test</div>
+
+        </div>
+        <div class="item-footer footer">
+            <div class="footer-table">
+                <div><button id="delete" onclick="alert('not implemented')">Delete</button></div>   
+                <div><button id="save" onclick="alert('not implemented')">Save</button></div>         
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

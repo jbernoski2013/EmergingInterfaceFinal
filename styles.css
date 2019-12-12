@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    
+    float: right;
+
+    grid-template-rows: 50px 50px auto 50px;
+    grid-template-columns: 50px auto;
+
+    grid-template-areas: 
+    "nav header"
+    "options title"
+    "options note"
+    "footer footer";
+}
+
+.item-navBar{
+    grid-area: navBar;
+}
+
+.item-nav{
+    grid-area: nav;
+}
+
+.item-header{
+    grid-area: header;
+}
+
+.item-title{
+    grid-area: title;
+    border-bottom: 1px solid black;
+}
+
+.item-title input{
+    height: 100%;
+    width: 100%;
+
+    font-size: 20px;
+
+    border: none;
+}
+
+.item-options{
+    grid-area: options;
+    overflow-y: scroll;
+}
+
+.item-options::-webkit-scrollbar{
+    display: none;
+}
+
+.item-note{
+    grid-area: note;
+    overflow-y: auto;
+}
+
+.item-note div{
+
+    width: 100%;
+    min-height: 100%;
+}
+
+.item-footer{
+    grid-area: footer;
+}
+
+.header{
+    background-color: teal;
+    color: white;
+
+    width: 100%;
+    height: 100%;
+}
+
+.header-title h1{
+    line-height: 36px;
+    margin: 7px;
+}
+
+.edit-option-icon{
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+}
+
+.edit-option-icon:hover{
+    background-color: lightgray;
+}
+
+.footer{
+    background-color: teal;
+    color: white;
+
+    width: 100%;
+    height: 100%;
+}
+
+.footer-table{
+    display: table;
+    table-layout: fixed;
+
+    width: 100%;
+    height: 100%;
+}
+
+.footer-table div{
+    display: table-cell;
+}
+
+#main button{
+    border: none;
+    overflow: hidden;
+    text-align: center;
+
+    font-size: 20px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: teal;
+    color: white;
+}
+
+#main button:hover{
+    background-color: lightgray;
+    color: black;
+}
+
+#closeNav{
+    display: none;
+
+    font-weight: bold;
+}
+
+#navBar{
+    display: none;
+    width: 25%;
+    height: 100%;
+    float: left;
+    overflow-y: scroll;
+
+    border-right: 1px solid black;
+}
+
+#navBar::-webkit-scrollbar{
+    display: none;
+}
+
+.navBar-table{
+    display: table;
+    width: 100%;
+}
+
+.navBar-table div{
+    display: table-row;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.navBar-table button{
+    border: none;
+    overflow: hidden;
+    text-align: center;
+
+    font-size: 20px;
+
+    width: 100%;
+    height: 40px;
+
+    background-color: white;
+    color: black;
+}
+
+.navBar-table button:hover{
+    background-color: lightgray;
+    color: black;
+}
+
+#newNote{
+    height: 50px;
+    font-weight: bold;
+
+    background-color: gray;
+    color: white;
+}
+
+#newNote:hover{
+    background-color: lightgray;
+    color: black;
+}

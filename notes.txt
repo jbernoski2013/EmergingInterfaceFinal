@@ -1,0 +1,27 @@
+Options:
+    bold
+    italic
+    underline
+
+    justify
+
+    orderedlist
+    unorderedlist
+
+    fontSize
+
+    undo
+    redo
+    
+//https://www.w3schools.com/jsref/met_document_execcommand.asp
+//https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand
+
+//https://www.w3schools.com/w3css/w3css_sidebar.asp
+//https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_sidebar_shift
+/https://www.w3schools.com/w3css/4/w3.css
+
+//https://www.w3schools.com/cssref/css_websafe_fonts.asp
+
+//https://stackoverflow.com/questions/29973357/how-do-you-format-code-in-visual-studio-code-vscode
+//https://stackoverflow.com/questions/18665171/how-to-make-the-main-content-div-fill-height-of-screen-with-css
+//http://jsfiddle.net/mdares/a8VVw/
